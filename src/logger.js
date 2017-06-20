@@ -121,7 +121,19 @@ var opts = {
 		/*
 		 * Always initialize "ofn" (original function) with the original logger function
 		 */
-		opts.express.ofn = morgan('combined', { stream: opts.streams.log.f });
+		// opts.express.ofn = morgan('combined', { stream: opts.streams.log.f });
+		opts.express.ofn = morgan(
+                        function (tokens, req, res) {
+                                winston.info([
+                                        tokens.method(req, res),
+                                        tokens.url(req, res),
+                                        tokens.status(req, res),
+                                        tokens.res(req, res, 'content-length'), '-',
+                                        tokens['response-time'](req, res), 'ms'
+                                        ].join(' ')
+                                );
+                        }
+                );
 	};
 
 	Logger.expressLogger = function (req, res, next) {
