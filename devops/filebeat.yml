@@ -1,0 +1,13 @@
+filebeat.prospectors:
+- input_type: log
+  paths:
+    - /root/apps/nodebb/logs/output.log
+  multiline.pattern: ^\(
+  multiline.negate: true
+  multiline.match: after
+  fields_under_root:
+    project: nodebb
+    env: deveate
+output.logstash:
+  hosts: ["10.225.33.159:5044"]
+logging.level: debug
