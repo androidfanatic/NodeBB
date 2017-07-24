@@ -9,6 +9,6 @@ fiperiod: 10stricbeat/metricbeat.yml" do
   cpu_ticks: false
 fields:
   project: nodebb
-  env: dev.modules:
+  env: dev
 output.logstash:
   hosts: ["10.225.33.159:5044"]
