@@ -1,12 +1,12 @@
 metricbeat.modules:
-- module: system
-  metricsets:
-    - cpu
-    - filesystem
-    - memory
-  enabled: trueetc/metricbeat/metricbeat.yml" do
-fiperiod: 10stricbeat/metricbeat.yml" do
-  cpu_ticks: false
+  - module: system
+    metricsets:
+      - cpu
+      - filesystem
+      - memory
+    enabled: true
+    period: 10s
+    cpu_ticks: false
 fields:
   project: nodebb
   env: dev
