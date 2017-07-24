@@ -1,0 +1,14 @@
+metricbeat.modules:
+- module: system
+  metricsets:
+    - cpu
+    - filesystem
+    - memory
+  enabled: trueetc/metricbeat/metricbeat.yml" do
+fiperiod: 10stricbeat/metricbeat.yml" do
+  cpu_ticks: false
+fields:
+  project: nodebb
+  env: dev.modules:
+output.logstash:
+  hosts: ["10.225.33.159:5044"]
