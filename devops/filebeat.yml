@@ -9,5 +9,5 @@ filebeat.prospectors:
     project: nodebb
     env: ${CHATOPS_PROJECT_ENV}
 output.logstash:
-  hosts: ["${CHATOPS_LOGSTASH_HOST}"]
+  hosts: ["${LOGSTASH_HOST}"]
 logging.level: debug
