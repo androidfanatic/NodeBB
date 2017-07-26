@@ -9,6 +9,6 @@ metricbeat.modules:
     cpu_ticks: false
 fields:
   project: nodebb
-  env: dev
+  env: ${CHATOPS_PROJECT_ENV}
 output.logstash:
-  hosts: ["10.225.33.159:5044"]
+  hosts: ["${CHATOPS_LOGSTASH_HOST}"]
