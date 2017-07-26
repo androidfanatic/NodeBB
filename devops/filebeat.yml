@@ -7,7 +7,7 @@ filebeat.prospectors:
   multiline.match: after
   fields_under_root:
     project: nodebb
-    env: dev
+    env: ${CHATOPS_PROJECT_ENV}
 output.logstash:
   hosts: ["${CHATOPS_LOGSTASH_HOST}"]
 logging.level: debug
