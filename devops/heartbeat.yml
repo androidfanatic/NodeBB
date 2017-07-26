@@ -3,7 +3,7 @@ heartbeat.monitors:
   urls: ["${MONITOR_URL}"]
   schedule: '@every 10s'
   timeout: 10s
-fields_under_root:
+fields:
   project: nodebb
   env: ${PROJECT_ENV}
 
