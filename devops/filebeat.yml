@@ -5,7 +5,7 @@ filebeat.prospectors:
   multiline.pattern: ^\(
   multiline.negate: true
   multiline.match: after
-  fields_under_root:
+  fields:
     project: nodebb
     env: ${PROJECT_ENV}
 output.logstash:
