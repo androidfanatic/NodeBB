@@ -1,1 +1,1 @@
-### Used for ChatOps use case demo
+### Used for ChatOps use-case demo
