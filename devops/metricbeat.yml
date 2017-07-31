@@ -11,4 +11,4 @@ fields:
   project: nodebb
   env: ${PROJECT_ENV}
 output.logstash:
-  hosts: ["${METRICBEAT_LOGSTASH_HOST}"]
+  hosts: ["${LOGSTASH_HOST}"]
