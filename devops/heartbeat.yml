@@ -8,4 +8,4 @@ fields:
   env: ${PROJECT_ENV}
 
 output.logstash:
-  hosts: ["${HEARTBEAT_LOGSTASH_HOST}"]
+  hosts: ["${LOGSTASH_HOST}"]
