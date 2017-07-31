@@ -9,5 +9,5 @@ filebeat.prospectors:
     project: nodebb
     env: ${PROJECT_ENV}
 output.logstash:
-  hosts: ["${FILEBEAT_LOGSTASH_HOST}"]
+  hosts: ["${LOGSTASH_HOST}"]
 logging.level: debug
