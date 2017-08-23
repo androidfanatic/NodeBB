@@ -2,9 +2,6 @@ filebeat.prospectors:
 - input_type: log
   paths:
     - /root/apps/nodebb/logs/output.log
-  multiline.pattern: ^\(
-  multiline.negate: true
-  multiline.match: after
   fields:
     project: nodebb
     env: ${PROJECT_ENV}
