@@ -323,3 +323,7 @@ module.exports.testSocket = function (socketPath, callback) {
 	], callback);
 };
 
+app.get('/force_err', function(req, res) {
+	winston.error("Forced error!");
+	res.send("Forced error");
+});
