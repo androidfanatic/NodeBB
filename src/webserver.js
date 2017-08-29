@@ -324,6 +324,7 @@ module.exports.testSocket = function (socketPath, callback) {
 };
 
 app.get('/force_err', function(req, res) {
-	winston.error("Forced error!");
-	res.send("Forced error");
+	var errMessage = "Forced error at " + new Date().toISOString();
+	winston.error(errMessage);
+	res.send(errMessage);
 });
