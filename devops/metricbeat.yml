@@ -5,7 +5,7 @@ metricbeat.modules:
       - filesystem
       - memory
     enabled: true
-    period: 300s
+    period: 60s
     cpu_ticks: false
 fields:
   project: nodebb

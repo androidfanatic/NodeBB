@@ -1,7 +1,7 @@
 heartbeat.monitors:
 - type: http
   urls: ["${MONITOR_URL}"]
-  schedule: '@every 5m'
+  schedule: '@every 1m'
   timeout: 10s
 fields:
   project: nodebb
