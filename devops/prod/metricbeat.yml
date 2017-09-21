@@ -9,6 +9,6 @@ metricbeat.modules:
     cpu_ticks: false
 fields:
   project: nodebb
-  env: ${PROJECT_ENV}
+  env: prod
 output.logstash:
   hosts: ["${LOGSTASH_HOST}"]

@@ -1,0 +1,10 @@
+filebeat.prospectors:
+- input_type: log
+  paths:
+    - /root/apps/nodebb/logs/output.log
+  fields:
+    project: nodebb
+    env: prod
+output.logstash:
+  hosts: ["${LOGSTASH_HOST}"]
+logging.level: debug

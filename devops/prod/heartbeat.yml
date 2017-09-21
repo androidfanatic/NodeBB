@@ -1,11 +1,11 @@
 heartbeat.monitors:
 - type: http
-  urls: ["${MONITOR_URL}"]
+  urls: ["/", "/login"]
   schedule: '@every 1m'
   timeout: 10s
 fields:
   project: nodebb
-  env: ${PROJECT_ENV}
+  env: prod
 
 output.logstash:
   hosts: ["${LOGSTASH_HOST}"]

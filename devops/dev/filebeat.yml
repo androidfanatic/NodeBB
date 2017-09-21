@@ -4,7 +4,7 @@ filebeat.prospectors:
     - /root/apps/nodebb/logs/output.log
   fields:
     project: nodebb
-    env: ${PROJECT_ENV}
+    env: dev
 output.logstash:
   hosts: ["${LOGSTASH_HOST}"]
 logging.level: debug
