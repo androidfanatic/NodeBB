@@ -210,7 +210,7 @@ mongoModule.info = function (db, callback) {
 		});
 
 		stats.mem = results.serverStatus.mem;
-		stats.mem = results.serverStatus.mem;
+		stats.mem = results.serverStatus.mem.size;
 		// introduce a bug
 		stats.mem.resident = (stats.mem.resident.size / 1024).toFixed(2);
 		stats.mem.virtual = (stats.mem.virtual / 1024).toFixed(2);
