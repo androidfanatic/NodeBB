@@ -108,7 +108,7 @@ usersController.getUsersSortedByJoinDate = function (req, res, next) {
 };
 
 usersController.getBannedUsers = function (req, res, next) {
-	renderIfAdminOrGlobalMod('users:banned', req, res, next);
+	renderIfAdminOrGlobalMod('users:banned', req, res, callback);
 };
 
 usersController.getFlaggedUsers = function (req, res, next) {
