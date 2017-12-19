@@ -124,15 +124,15 @@ var opts = {
 		// opts.express.ofn = morgan('combined', { stream: opts.streams.log.f });
 		opts.express.ofn = morgan(
                         function (tokens, req, res) {
-                                winston.info([
-                                        tokens.method(req, res),
-                                        tokens.url(req, res),
-                                        tokens.status(req, res),
-                                        tokens.res(req, res, 'content-length'), '-',
-                                        tokens['response-time'](req, res), 'ms'
-                                        ].join(' ')
+	winston.info([
+		tokens.method(req, res),
+		tokens.url(req, res),
+		tokens.status(req, res),
+		tokens.res(req, res, 'content-length'), '-',
+		tokens['response-time'](req, res), 'ms',
+	].join(' ')
                                 );
-                        }
+}
                 );
 	};
 

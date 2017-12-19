@@ -5,7 +5,7 @@
 
 	// export the class if we are in a Node-like system.
 	if (typeof module === 'object' && module.exports === exports) {
-		exports = module.exports/* = SemVer*/;
+		exports = module.exports/* = SemVer */;
 	}
 
 	var helpers = exports;
@@ -269,7 +269,7 @@
 
 	// export the class if we are in a Node-like system.
 	if (typeof module === 'object' && module.exports === exports) {
-		exports = module.exports/* = SemVer*/;
+		exports = module.exports/* = SemVer */;
 	} else if (typeof define === 'function' && define.amd) {
 		// Use the define() function if we're in AMD land
 		define('helpers', exports);
