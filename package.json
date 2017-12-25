@@ -14,11 +14,11 @@
     "lint": "eslint --cache ./nodebb . --fix",
     "pretest": "npm run lint",
     "test": "istanbul cover node_modules/mocha/bin/_mocha -- -R dot",
-    "coveralls": "istanbul cover _mocha --report cobertura -- -R dot && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
+    "coveralls": "istanbul cover _mocha --reporter mocha-junit-reporter --report cobertura -- -R dot && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
   },
   "dependencies": {
-    "async": "2.4.0",
     "ace-builds": "^1.2.6",
+    "async": "2.4.0",
     "autoprefixer": "7.0.1",
     "bcryptjs": "2.4.3",
     "body-parser": "^1.9.0",
@@ -110,6 +110,7 @@
     "istanbul": "^0.4.2",
     "jsdom": "9.12.0",
     "mocha": "~3.2.0",
+    "mocha-junit-reporter": "^1.15.0",
     "mocha-lcov-reporter": "^1.2.0",
     "xmlhttprequest": "1.8.0",
     "xmlhttprequest-ssl": "1.5.3"
