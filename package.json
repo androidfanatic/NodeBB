@@ -14,7 +14,7 @@
     "lint": "eslint --cache ./nodebb . --fix",
     "pretest": "npm run lint",
     "test": "istanbul cover node_modules/mocha/bin/_mocha -- -R dot",
-    "coveralls": "istanbul cover _mocha --report mocha-junit-reporter --report cobertura -- -R dot && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
+    "coveralls": "istanbul cover _mocha --report cobertura -- -R dot && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
   },
   "dependencies": {
     "ace-builds": "^1.2.6",
